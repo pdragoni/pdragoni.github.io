@@ -82,7 +82,8 @@ functions validateEmail
 
 function validateEmail() {
   const email = emailInput.value;
-  const emailPattern = /^n[\d{6}.-]+@gruposantander.com$/; // n123456@gruposantander.com
+  // const emailPattern = /^n[\d{6}.-]+@gruposantander.com$/; // n123456@gruposantander.com
+  const emailPattern = /^[a-z]+\.[a-z]+@(servexternos\.)?pagonxt\.com$/ //user.user@pagonxt.com user.user@servexternos.pagonxt.com
 
   if (emailPattern.test(email)) {
     emailMessage.style.display = 'block';
