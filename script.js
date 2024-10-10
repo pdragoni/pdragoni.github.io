@@ -33,25 +33,29 @@ let seconds = 0;
 let minutes = 0;
 let hours = 0;
 let interval;
+let firstTime = true;
 
 function startChronometer() {
-  interval = setInterval(() => {
-    seconds++;
-    if (seconds === 60) {
-      seconds = 0;
-      minutes++;
+  if (firstTime === true) {
+    firstTime = false;
+    interval = setInterval(() => {
+      seconds++;
+      if (seconds === 60) {
+        seconds = 0;
+        minutes++;
+      }
+      if (minutes === 60) {
+        minutes = 0;
+        hours++;
+      }
+      chronometer.innerHTML = `<span>${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2,
+        '0')}:${seconds.toString().padStart(2, '0')}</span>`;
     }
-    if (minutes === 60) {
-      minutes = 0;
-      hours++;
-    }
-    chronometer.innerHTML = `<span>${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2,
-      '0')}:${seconds.toString().padStart(2, '0')}</span>`;
+      , 1000);
+    startButton.disabled = true;
+    // stopButton.disabled = false;
+    // resetButton.disabled = false;
   }
-    , 1000);
-  startButton.disabled = true;
-  // stopButton.disabled = false;
-  // resetButton.disabled = false;
 }
 
 function stopChronometer() {
@@ -85,11 +89,12 @@ function validateEmail() {
     passwordInput.disabled = false;
     return true;
   } else {
+    passwordInput.disabled = true;
     emailMessage.style.display = 'none';
+    startButton.disabled = true;
     submitButton.disabled = true;
     return false;
   }
-
 }
 
 /*
