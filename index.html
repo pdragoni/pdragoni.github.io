@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password-Guesser</title>
+</head>
+
+<body>
+  <main>
+    <h1>Password Guesser</h1>
+    <p>Adivinhe a senha correta</p>
+    <div class="chronometer-container">
+      <div class="chronometer">
+        <span>00:00:00</span>
+      </div>
+      <div class="chronometer-buttons">
+        <button class="start-button" disabled>Start</button>
+        <!-- <button class="stop-button">Stop</button> -->
+        <!-- <button class="reset-button">Reset</button> -->
+      </div>
+    </div>
+
+    <form>
+      <div class="container-input">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required></input>
+      </div>
+      <div class="container-input">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" onfocus="startChronometer()"></input>
+      </div>
+      <button type=button class="submit-button" disabled>Submit</button>
+    </form>
+    <p class="email-message" style="display:none">✔ E-mail válido</p>
+    <section class="validations"></section>
+    <button class="instructions-button" disabled>Mostrar instruções</button>
+    <div class="instructions">
+      <div class="instructions-content">
+        <h4>Instrucões</h4>
+        <p>1. Primeiro insira seu email gruposantander.com.
+          <br>
+          Somente assim o campo de senha estará habilitado
+        </p>
+        <p>2. Comece digitando uma senha</p>
+        <p>3. Novas dicas aparecerão conforme você acertar</p>
+        <p>4. Ao selecionar o campo senha, o cronometro disparará. Parar ou resetar o cronômetro bloqueará o campo senha
+        </p>
+        <p>5. Quando a senha estiver correta, o botão Submit será habilitado.</p>
+        <p>6. Clicar o botão Submit parará o cronômetro e permitirá que você tire print da tela.</p>
+      </div>
+      <span class="close-button">Fechar ×</span>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
