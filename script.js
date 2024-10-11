@@ -89,10 +89,10 @@ validationsObject
 */
 
 const cases = 2;
-const length = 23
+const length = 26
 const validationsObject = {
   length: {
-    message: "Tem pelo menos 23 caracteres",
+    message: "Tem pelo menos 26 caracteres",
     function: () => (passwordInput.value.length >= length) ?? false,
   },
   specialCharacter: {
@@ -110,7 +110,7 @@ const validationsObject = {
     },
   },
   specialCharacter2: {
-    message: "$",
+    message: "Caractere usado para dinheiro",
     function: () => {
       const specialCases = passwordInput.value.match(/\$/);
       return specialCases !== null && specialCases.length === 1;
