@@ -53,28 +53,14 @@ function startChronometer() {
     }
       , 1000);
     startButton.disabled = true;
-    // stopButton.disabled = false;
-    // resetButton.disabled = false;
   }
 }
 
 function stopChronometer() {
   clearInterval(interval);
-  // stopButton.disabled = true;
   passwordInput.disabled = true;
   startButton.disabled = true;
 }
-
-// function resetChronometer() {
-//   clearInterval(interval);
-//   seconds = 0;
-//   minutes = 0;
-//   hours = 0;
-//   // chronometer.innerHTML = '<span>00:00:00</span>';
-//   stopButton.disabled = true;
-//   startButton.disabled = true;
-//   passwordInput.disabled = true;
-// }
 
 /*
 functions validateEmail
@@ -117,9 +103,9 @@ const validationsObject = {
     }
   },
   slogan: {
-    message: "SloganDaCampanha",
+    message: "SloganDaCampanha do Dia do Profissional de TI",
     function: () => {
-      const slogan = passwordInput.value.match('SloganDaCampanha');
+      const slogan = passwordInput.value.match('JuntosSomosMaisTech');
       return slogan !== null;
     },
   },
@@ -212,6 +198,3 @@ passwordInput.addEventListener('input', validatePassword);
 submitButton.addEventListener('click', submitPassword);
 closeButton.addEventListener('click', hideInstructions);
 instructionsButton.addEventListener('click', showInstructions);
-// startButton.addEventListener('click', startChronometer);
-// stopButton.addEventListener('click', stopChronometer);
-// resetButton.addEventListener('click', resetChronometer);
