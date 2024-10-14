@@ -103,21 +103,21 @@ const validationsObject = {
     }
   },
   slogan: {
-    message: "SloganDaCampanha do Dia do Profissional de TI",
+    message: "Mensagem principal deste Dia do Profissional da TI",
     function: () => {
       const slogan = passwordInput.value.match('JuntosSomosMaisTech');
       return slogan !== null;
     },
   },
   specialCharacter2: {
-    message: "Caractere usado para dinheiro",
+    message: "Caractere especial quando lembramos do PPR",
     function: () => {
       const specialCases = passwordInput.value.match(/\$/);
       return specialCases !== null && specialCases.length === 1;
     }
   },
   oneBrandYear: {
-    message: "Ano da OneBrand",
+    message: "Ano em que viramos One Brand",
     function: () => {
       const ano = passwordInput.value.match(/2024$/);
       return ano !== null;
