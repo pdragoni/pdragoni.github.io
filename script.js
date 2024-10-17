@@ -183,7 +183,7 @@ function showForms() {
   const finalFormsText = document.createElement('span');
   const finalFormsLink = document.createElement('a');
   finalFormsText.innerHTML = `<span class="final-forms-text">${formsText}</span>`;
-  finalFormsLink.innerHTML = `<a class="final-forms-link">${formsLink}</a>`;
+  finalFormsLink.innerHTML = `<a href="${formsLink} class="final-forms-link">Formulário de Envio</a>`;
   finalForms.appendChild(finalFormsText);
   finalForms.appendChild(finalFormsLink);
 }
