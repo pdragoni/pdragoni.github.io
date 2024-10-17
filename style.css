@@ -142,3 +142,12 @@ button:disabled {
     display: flex;
     flex-direction: column;
 }
+
+.final-forms-text {
+  font-weight: 700;
+}
+
+.final-forms-link {
+  cursor: pointer;
+  font-style: none;
+}
