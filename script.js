@@ -68,7 +68,6 @@ functions validateEmail
 
 function validateEmail() {
   const email = emailInput.value;
-  // const emailPattern = /^n[\d{6}.-]+@gruposantander.com$/; // n123456@gruposantander.com
   const emailPattern = /^[a-z]+\.[a-z]+@(servexternos\.)?pagonxt\.com$/ //user.user@pagonxt.com user.user@servexternos.pagonxt.com
 
   if (emailPattern.test(email)) {
@@ -173,20 +172,33 @@ function validatePassword() {
 
 } // fim validatePassword
 
+/*
+funções do submit-button
+*/
+const formsText = "Agora que você finalizou, entre no link a seguir e nos envie um print da tela"
+const formsLink = "https://forms.office.com/e/3AruK4xh0Z"
+
+function showForms() {
+  const finalForms = document.createElement('span');
+  const finalFormsLink = document.createElement('a');
+  finalForms.classList.add('final-forms');
+  finalForms.innerHTML = `<span>${formsText}</span>`;
+  finalFormsLink.classList.add('final-forms-link');
+  finalFormsLink.innerText = formsLink;
+  instructions.appendChild(finalForms, finalFormsLink);
+}
+
 
 function submitPassword() {
   let time = chronometer.innerText;
   let email = emailInput.value.toString();
   let password = passwordInput.value;
-  console.log(time);
-  console.log(email);
-  console.log(password);
   stopChronometer();
   startButton.disabled = true;
   emailInput.disabled = true;
   passwordInput.disabled = true;
   submitButton.disabled = true;
-  // resetButton.disabled = true;
+  showForms();
 }
 
 /*
