@@ -136,3 +136,9 @@ button:disabled {
   display: flex;
   flex-direction: column;
 }
+
+.final-forms {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
