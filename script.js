@@ -102,7 +102,7 @@ const validationsObject = {
     }
   },
   slogan: {
-    message: "Mensagem principal deste Dia do Profissional da TI",
+    message: "Mensagem principal deste Dia do Profissional da TI (PascalCase)",
     function: () => {
       const slogan = passwordInput.value.match('JuntosSomosMaisTech');
       return slogan !== null;
